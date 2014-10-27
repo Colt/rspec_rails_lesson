@@ -11,12 +11,13 @@ This app already has rspec installed.  If you're starting a new app, here are th
 To test AJAX requests/JSON responses:
 
 ```ruby
-rails g rspec:install
 @expected = { 
         :flashcard  => @flashcard,
         :lesson     => @lesson,
         :success    => true
 }.to_json
+
 xhr :get, :index
+
 response.body.should == @expected
 ```
