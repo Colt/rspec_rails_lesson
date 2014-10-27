@@ -11,8 +11,18 @@ describe "Todos Management" do
       follow_redirect!
 
       expect(response).to render_template(:show)
-      expect(response.body).to include("Do Things")
+      expect(response.body).to include("My Todo")
     end
   end
 
 end
+
+# rails g rspec:install
+# @expected = { 
+#         :flashcard  => @flashcard,
+#         :lesson     => @lesson,
+#         :success    => true
+# }.to_json
+# xhr :get, :index
+# response.body.should == @expected
+

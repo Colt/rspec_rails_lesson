@@ -5,4 +5,5 @@ class Todo < ActiveRecord::Base
 		self.where(updated_at: (date)..Time.now)
 	end
 
+
 end
